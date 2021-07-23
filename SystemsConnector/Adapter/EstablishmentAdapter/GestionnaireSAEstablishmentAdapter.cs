@@ -40,7 +40,9 @@ namespace SystemsConnector.Adapter.EstablishmentAdapter
         private static Company BuildDTOCompany(Establishment establishment)
         {
             if (establishment == null)
-                throw new Exception();
+            {
+                throw new ArgumentNullException(nameof(establishment));
+            }
 
             Company company = new()
             {

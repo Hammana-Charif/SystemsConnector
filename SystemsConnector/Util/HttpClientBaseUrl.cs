@@ -7,7 +7,7 @@ namespace SystemsConnector.Util
     /// <summary>
     /// Défini la base url, le token et les headers pour la requête à envoyer
     /// </summary>
-    class HttpClientBaseUrl
+    static class HttpClientBaseUrl
     {
         /// <summary>
         /// Défini la base url, le token et les headers pour la requête à envoyer

@@ -27,7 +27,7 @@ namespace SystemsConnector.Adapter.HttpClient
         /// </summary>
         /// <param name="baseUrl"></param>
         /// <param name="endPoint"></param>
-        public BaseClient(string baseUrl, string endPoint)
+        protected BaseClient(string baseUrl, string endPoint)
         {
             _baseUrl = baseUrl;
             _endPoint = endPoint;
@@ -37,7 +37,7 @@ namespace SystemsConnector.Adapter.HttpClient
         /// Surcharge du constructeur qui permet de renseigner seulement la base url
         /// </summary>
         /// <param name="baseUrl"></param>
-        public BaseClient(string baseUrl)
+        protected BaseClient(string baseUrl)
         {
             _baseUrl = baseUrl;
         }

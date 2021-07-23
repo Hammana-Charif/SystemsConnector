@@ -43,7 +43,7 @@ namespace SystemsConnector.Adapter.EstablishmentAdapter
         private static Establishment BuildEStablishementList(HttpResponseMessage response)
         {
             var responseString = response.Content.ReadAsStringAsync().Result;
-            var objectResult = JsonSerializer.Deserialize<EstablishmentGroup>(responseString, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            var objectResult = JsonSerializer.Deserialize<EstablishmentGroup>(responseString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             Establishment establishment = SelectEstablishmentType(objectResult);
             return establishment;
         }
@@ -56,9 +56,13 @@ namespace SystemsConnector.Adapter.EstablishmentAdapter
         private static Establishment SelectEstablishmentType(EstablishmentGroup objectResult)
         {
             if (objectResult.Etablissement == null)
+            {
                 return objectResult.Etablissements;
+            }
             else
+            {
                 return objectResult.Etablissement;
+            }
         }
     }
 }
