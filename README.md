@@ -1,0 +1,2 @@
+# SystemsConnector
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d525cf75bf3b4367a0893261bd117600)](https://app.codacy.com/gh/Hammana-Charif/SystemsConnector?utm_source=github.com&utm_medium=referral&utm_content=Hammana-Charif/SystemsConnector&utm_campaign=Badge_Grade_Settings)
