@@ -22,7 +22,7 @@ namespace SystemsConnector.Adapter.EstablishmentAdapter
         {
             SireneApiClient sireneApiClient = new (EnvironmentVariable.DefineSireneApiBaseUrl(id), EnvironmentVariable.SIRENE_API_KEY);
             var response = sireneApiClient.Get(id).WaitAndUnwrapException();
-            return BuildEStablishementList(response);
+            return BuildEstablishementList(response);
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace SystemsConnector.Adapter.EstablishmentAdapter
         /// </summary>
         /// <param name="response"></param>
         /// <returns></returns>
-        private static Establishment BuildEStablishementList(HttpResponseMessage response)
+        private static Establishment BuildEstablishementList(HttpResponseMessage response)
         {
             var responseString = response.Content.ReadAsStringAsync().Result;
             var objectResult = JsonSerializer.Deserialize<EstablishmentGroup>(responseString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
