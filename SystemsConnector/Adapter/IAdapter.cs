@@ -4,7 +4,7 @@
     /// Cadre les adapters
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    interface IAdapter<TEntity>
+    public interface IAdapter<TEntity>
     {
         /// <summary>
         /// Méthode de fetch pour chaque adapter
@@ -18,6 +18,6 @@
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        void Create(TEntity obj);
+        TEntity Create();
     }
 }

@@ -4,7 +4,7 @@
     /// Défini le comportement et les méthodes d'un adapter via l'héritage
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    abstract class BaseAdapter<TEntity> : IAdapter<TEntity>
+    public abstract class BaseAdapter<TEntity> : IAdapter<TEntity>
     {
         /// <summary>
         /// Fetch un objet depuis une datasource
@@ -18,6 +18,6 @@
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        abstract public void Create(TEntity obj);
+        abstract public TEntity Create();
     }
 }

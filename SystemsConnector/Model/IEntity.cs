@@ -1,6 +1,6 @@
 ﻿namespace SystemsConnector.Model
 {
-    interface IEntity
+    public interface IEntity
     {
     }
 }

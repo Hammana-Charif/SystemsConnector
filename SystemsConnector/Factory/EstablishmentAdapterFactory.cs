@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using SystemsConnector.Adapter;
 using SystemsConnector.Adapter.EstablishmentAdapter;
-using SystemsConnector.Model.SireneApiModel;
 
 namespace SystemsConnector.Factory
 {
     /// <summary>
     /// Fabrique des adapters pour l'entité "Establishment"
     /// </summary>
-    class EstablishmentAdapterFactory : BaseFactory<Establishment>
+    public class EstablishmentAdapterFactory : BaseFactory<Task<HttpResponseMessage>>
     {
         /// <summary>
         /// Renvoi un adapter
@@ -16,12 +17,12 @@ namespace SystemsConnector.Factory
         /// <param name="systemType"></param>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public override IAdapter<Establishment> Fabricate(SystemType systemType)
+        public override IAdapter<Task<HttpResponseMessage>> Fabricate(SystemType systemType)
         {
             return systemType switch
             {
                 SystemType.Sirene => new SireneEstablishmentAdapter(),
-                SystemType.GestionnaireDeStockApp => new GestionnaireSAEstablishmentAdapter(),
+                SystemType.StockManager => new StockManagerEstablishmentAdapter(),
                 _ => throw new InvalidOperationException("Adapter non pris en charge"),
             };
         }

@@ -7,7 +7,7 @@ namespace SystemsConnector.Adapter.HttpClient
     /// Cadre la création d'un client
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    interface IClient<TEntity>
+    public interface IClient<TEntity>
     {
         /// <summary>
         /// Récupère de la donnée depuis un système

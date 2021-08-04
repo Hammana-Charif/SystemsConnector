@@ -1,6 +1,6 @@
 ﻿namespace SystemsConnector.Model.SireneApiModel
 {
-    class Establishment : BaseEntity
+    public class Establishment : BaseEntity
     {
         public string Siren { get; set; }
         public string Nic { get; set; }

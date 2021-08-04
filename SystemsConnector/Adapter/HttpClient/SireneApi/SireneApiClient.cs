@@ -9,25 +9,25 @@ namespace SystemsConnector.Adapter.HttpClient.SireneApi
     /// <summary>
     /// Définie les endpoints à partir d'une base url pour l'api Sirene.fr
     /// </summary>
-    class SireneApiClient : BaseClient<Establishment>
+    public class SireneApiClient : BaseClient<Establishment>
     {
         /// <summary>
         /// Surchage du constructeur qui prend en paramètre la base url et un l'endpoint
         /// </summary>
         /// <param name="baseUrl"></param>
-        /// <param name="endPoint"></param>
-        public SireneApiClient(string baseUrl, string endPoint) 
-            : base(baseUrl, endPoint) { }
+        /// <param name="token"></param>
+        public SireneApiClient(string baseUrl, string token) 
+            : base(baseUrl, token) { }
 
         /// <summary>
         /// Retourne l'objet récupéré de l'api Sirene
         /// </summary>
-        /// <param name="endPoint"></param>
+        /// <param name="siretOrSiren"></param>
         /// <returns></returns>
-        public override async Task<HttpResponseMessage> Get(string endPoint)
+        public override async Task<HttpResponseMessage> Get(string siretOrSiren)
         {
-            var client = HttpClientBaseUrl.NewHttpClient(BaseUrl, EndPoint);
-            var response = await client.GetAsync(endPoint);
+            var client = HttpClientBaseUrl.NewHttpClient(BaseUrl, Token);
+            var response = await client.GetAsync(BaseUrl);
             return response;
         }
 

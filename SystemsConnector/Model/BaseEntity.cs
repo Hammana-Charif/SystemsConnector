@@ -1,6 +1,6 @@
 ﻿namespace SystemsConnector.Model
 {
-    class BaseEntity : IEntity
+    public class BaseEntity : IEntity
     {
     }
 }

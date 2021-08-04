@@ -1,5 +1,4 @@
 ﻿using SystemsConnector.Adapter;
-using SystemsConnector.Model;
 
 namespace SystemsConnector.Factory
 {
@@ -7,7 +6,7 @@ namespace SystemsConnector.Factory
     /// Cadre la création d'une fabrique
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    interface IFactory<TEntity> where TEntity : BaseEntity
+    public interface IFactory<TEntity>
     {
         /// <summary>
         /// Méthode à implémenter dans chaque fabrique

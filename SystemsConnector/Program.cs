@@ -1,4 +1,5 @@
-﻿using SystemsConnector.Factory;
+﻿using SystemsConnector.Adapter.EstablishmentAdapter;
+using SystemsConnector.Factory;
 
 namespace SystemsConnector
 {
@@ -8,10 +9,14 @@ namespace SystemsConnector
         {
             EstablishmentAdapterFactory establishmentAdapterFactory = new();
             var sireneAdapter = establishmentAdapterFactory.Fabricate(SystemType.Sirene);
-            var gestionnaireStockApp = establishmentAdapterFactory.Fabricate(SystemType.GestionnaireDeStockApp);
+            var gestionnaireStockApp = establishmentAdapterFactory.Fabricate(SystemType.StockManager);
 
-            var establishment = sireneAdapter.Get("34798980800568");
-            gestionnaireStockApp.Create(establishment);          
+            //var response = sireneAdapter.Get("42878504200105");
+            var response = sireneAdapter.Get("380129866");
+
+            var establishmentGroup = SireneEstablishmentAdapter.BuildEStablishementGroup(response.Result);
+            StockManagerEstablishmentAdapter.Company = StockManagerEstablishmentAdapter.BuildDTOCompany(establishmentGroup)[2];
+            gestionnaireStockApp.Create().Wait();
         }
     }
 }

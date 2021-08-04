@@ -7,19 +7,19 @@ namespace SystemsConnector.Adapter.HttpClient
     /// Défini le comportement et les méthodes d'un client via l'héritage
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    abstract class BaseClient<TEntity> : IClient<TEntity>
+    public abstract class BaseClient<TEntity> : IClient<TEntity>
     {
         private readonly string _baseUrl;
-        private readonly string _endPoint;
+        private readonly string _token;
 
         protected string BaseUrl
         {
             get => _baseUrl;
         }
 
-        protected string EndPoint
+        protected string Token
         {
-            get => _endPoint;
+            get => _token;
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace SystemsConnector.Adapter.HttpClient
         protected BaseClient(string baseUrl, string endPoint)
         {
             _baseUrl = baseUrl;
-            _endPoint = endPoint;
+            _token = endPoint;
         }
 
         /// <summary>

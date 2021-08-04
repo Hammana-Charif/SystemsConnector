@@ -1,6 +1,6 @@
 ﻿namespace SystemsConnector.Model.SireneApiModel
 {
-    class UniteLegal : BaseEntity
+    public class UniteLegal : BaseEntity
     {
         public string DenominationUniteLegale { get; set; }
         public string ActivitePrincipaleUniteLegale { get; set; }

@@ -1,5 +1,4 @@
 ﻿using SystemsConnector.Adapter;
-using SystemsConnector.Model;
 
 namespace SystemsConnector.Factory
 {
@@ -7,7 +6,7 @@ namespace SystemsConnector.Factory
     /// Défini l'entité sur laquelle est créé l'adapter et implémente les méthodes requises
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    abstract class BaseFactory<TEntity> : IFactory<TEntity> where TEntity : BaseEntity
+    public abstract class BaseFactory<TEntity> : IFactory<TEntity>
     {
         /// <summary>
         /// Renvoi un adapter en fonction du SystemType

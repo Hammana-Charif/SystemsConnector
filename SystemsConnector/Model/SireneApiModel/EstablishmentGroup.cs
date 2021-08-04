@@ -1,6 +1,8 @@
-﻿namespace SystemsConnector.Model.SireneApiModel
+﻿using System.Collections.Generic;
+
+namespace SystemsConnector.Model.SireneApiModel
 {
-    class EstablishmentGroup : BaseEntity
+    public class EstablishmentGroup : BaseEntity
     {
         /// <summary>
         /// Mappage à "etablissement" lorsque l'api Sirene renvoi un etablissement unique
@@ -10,6 +12,6 @@
         /// <summary>
         /// Mappage à "etablissements" lorsque l'api Sirene renvoi une liste d'établissements
         /// </summary>
-        public Establishment Etablissements { get; set; }
+        public List<Establishment> Etablissements { get; set; }
     }
 }

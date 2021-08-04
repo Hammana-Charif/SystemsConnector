@@ -7,7 +7,7 @@ namespace SystemsConnector.Util
     /// <summary>
     /// Défini la base url, le token et les headers pour la requête à envoyer
     /// </summary>
-    static class HttpClientBaseUrl
+    public static class HttpClientBaseUrl
     {
         /// <summary>
         /// Défini la base url, le token et les headers pour la requête à envoyer
@@ -30,7 +30,7 @@ namespace SystemsConnector.Util
 
         /// <summary>
         /// Surcharge de la méthode qui défini la base url et les headers pour la requête à envoyer, sans le token
-        /// Méthode amenée à disparaître, quand les credentials et token seront mis en place pour l'api GestionnaireDeStockApp
+        /// Méthode amenée à disparaître, quand les credentials et token seront mis en place pour l'api StockManager
         /// </summary>
         /// <param name="baseUrl"></param>
         /// <returns></returns>
