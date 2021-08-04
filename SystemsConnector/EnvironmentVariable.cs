@@ -8,9 +8,9 @@ namespace SystemsConnector
     /// </summary>
     public static class EnvironmentVariable
     {
-        private const string SIRENE_API_KEY = "3167a134-28df-3b47-bd1c-f658937d8cec"; //constante pour le token Sirene.fr
-        private const string STOCKMANAGER_API_BASE_URL = "http://localhost:41896/api"; // constante pour la base url pour le système StockManager
-        private const string SIRENE_API_BASE_URL = "https://api.insee.fr/entreprises/sirene/V3/siret"; //constante pour la base url de l'api INSEE Sirene.fr
+        private const string SIRENE_API_KEY = ""; //constante pour le token Sirene.fr
+        private const string STOCKMANAGER_API_BASE_URL = ""; // constante pour la base url pour le système StockManager
+        private const string SIRENE_API_BASE_URL = ""; //constante pour la base url de l'api INSEE Sirene.fr
 
         /// <summary>
         /// Renvoi la bonne url en fonction de la longueur de saisie du numéro de recherche (SIRET ou SIREN)
